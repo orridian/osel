@@ -1,0 +1,38 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, url } from "../site";
+---
+<Base title="Privacy" description="What data OSEL collects (almost none) and why.">
+  <h1>Privacy</h1>
+  <p class="note">
+    This notice describes our actual systems as of {site.lastUpdated}. It must be re-checked against the live website and
+    reviewed before launch, and whenever we add a form, analytics or a new provider.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>System</th><th>Personal data collected</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td><code>osel</code> software</td><td>None. It runs locally, has no telemetry and makes no network requests.</td><td>—</td></tr>
+      <tr><td>This website</td><td>None by OSEL: no analytics, no cookies, no forms. Our static host may keep standard server logs (such as IP address and browser type).</td><td>Security and operation, by the host</td></tr>
+      <tr><td>GitHub</td><td>Whatever you choose to post publicly, under GitHub's own privacy terms.</td><td>Collaboration</td></tr>
+      <tr><td>Email to our role addresses</td><td>Your address and your message.</td><td>To reply to you</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Retention</h2>
+  <p>We delete correspondence up to 24 months after a conversation ends.</p>
+
+  <h2>Processors</h2>
+  <p>We will list our hosting and email-forwarding providers here by name once they are chosen.</p>
+
+  <h2>Your choices</h2>
+  <p>
+    Ask us to delete your correspondence at <code>{site.email.privacy}</code>. We never add anyone to a mailing list
+    without explicit opt-in.
+  </p>
+
+  <h2>Changes</h2>
+  <p>Changes are made in public. See the history of <a href={`${site.repo}/blob/main/policies/privacy.md`}>policies/privacy.md</a>.</p>
+</Base>

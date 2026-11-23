@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, url } from "../site";
+---
+<Base title="Security" description="How to report vulnerabilities in OSEL software privately.">
+  <h1>Security</h1>
+
+  <h2>Report a vulnerability privately</h2>
+  <p>
+    <strong>Do not open a public issue.</strong> Use GitHub's
+    <a href={`${site.repo}/security/advisories/new`}>private vulnerability reporting</a>, or email
+    <code>{site.email.security}</code>. Include the affected version, the impact and reproduction steps. Never send real credentials.
+  </p>
+
+  <h2>Supported versions</h2>
+  <p>Before 1.0, only the latest <code>0.x</code> minor release receives security fixes.</p>
+
+  <h2>What happens next</h2>
+  <ol>
+    <li>We acknowledge your report (target: 5 days) and give it a private tracking ID.</li>
+    <li>We assess severity, affected versions and exploitability.</li>
+    <li>We prepare a fix privately when public work would put users at risk.</li>
+    <li>We agree a disclosure date with you, normally within 90 days.</li>
+    <li>We publish an advisory with fixed versions and mitigations, and credit you only with your permission.</li>
+  </ol>
+  <p>
+    Full policy: <a href={`${site.repo}/blob/main/SECURITY.md`}>SECURITY.md</a>. Note that <code>osel</code> configs can
+    import and run Python code, so running an untrusted config is equivalent to running untrusted code.
+  </p>
+</Base>

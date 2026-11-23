@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, url } from "../site";
+---
+<Base title="Governance" description="How decisions are made at OSEL.">
+  <h1>Governance</h1>
+  <p class="note">The canonical document is <a href={`${site.repo}/blob/main/GOVERNANCE.md`}>GOVERNANCE.md</a>. This page summarizes it.</p>
+
+  <h2>Who decides what</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Decision</th><th>Who</th></tr></thead>
+    <tbody>
+      <tr><td>Day-to-day code changes</td><td>Maintainers, through pull-request review</td></tr>
+      <tr><td>Public API/CLI changes, deprecations</td><td>Maintainers. The Founding Technical Lead breaks ties</td></tr>
+      <tr><td>Roadmap, new programs, new products</td><td>Founding Technical Lead, after a public proposal (≥ 7 days)</td></tr>
+      <tr><td>Code of Conduct enforcement</td><td>Conduct contacts, privately</td></tr>
+      <tr><td>Legal, financial or contractual matters</td><td>Never informally. These involve a responsible adult and qualified advice</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Roles today</h2>
+  <p>
+    The Founder currently holds the Founding Technical Lead, maintainer and security-contact roles, with a trusted adult as
+    backup. Documentation lead, community organizer and research lead are <strong>unfilled</strong>. We don't list
+    titles nobody holds.
+  </p>
+
+  <h2>Challenging a decision</h2>
+  <p>Anyone can request reconsideration by opening a proposal issue with new evidence. Decisions and their reasons are recorded in the public decision log.</p>
+</Base>

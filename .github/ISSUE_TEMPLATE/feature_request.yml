@@ -1,0 +1,42 @@
+name: Feature request
+description: Describe a problem you want osel to solve.
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem being experienced
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who experiences it, and in what workflow?
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Current workaround
+    validations:
+      required: true
+  - type: textarea
+    id: inadequate
+    attributes:
+      label: Why is the workaround inadequate?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome (not only a proposed implementation)
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: How could success be measured?
+  - type: textarea
+    id: implications
+    attributes:
+      label: Potential compatibility or maintenance implications

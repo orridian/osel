@@ -1,0 +1,8 @@
+# Candidate evaluation: model v2 predictions on the same dataset.
+name: capitals-v2
+dataset: data.jsonl
+predictions: predictions_v2.jsonl
+metrics:
+  - exact_match
+  - token_f1
+seed: 0

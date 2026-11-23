@@ -1,0 +1,47 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, url } from "../site";
+---
+<Base title="Community" description="Ask questions, report bugs, and contribute to OSEL.">
+  <h1>Community</h1>
+
+  <h2>Ask a question</h2>
+  <p>Use <a href={`${site.repo}/discussions`}>GitHub Discussions</a> for usage questions.</p>
+
+  <h2>Report a bug or request a feature</h2>
+  <p>
+    Open a <a href={`${site.repo}/issues/new/choose`}>GitHub issue</a> using the templates.
+    <strong>Never post API keys, passwords, personal data or private datasets in public issues.</strong>
+    Security problems go through the <a href={url("/security")}>private security process</a>.
+  </p>
+
+  <h2>Contribute</h2>
+  <p>
+    Start with the <a href={`${site.repo}/blob/main/CONTRIBUTING.md`}>contributing guide</a> and issues labelled
+    <code>good first issue</code>. Each one states the problem, acceptance criteria, test command and a maintainer contact.
+    Documentation, testing, triage and design count as real contributions.
+  </p>
+
+  <h2>Become an alpha tester</h2>
+  <p>
+    If you evaluate models, prompts or pipelines and would try <code>osel</code> on a real workflow (about an hour),
+    join the <a href={`${site.repo}/blob/main/programs/early-access.md`}>Early Access Program</a>, and tell us how it went with the
+    <a href={`${site.repo}/issues/new?template=alpha_feedback.yml`}>Alpha feedback form</a>. We'll ask about your workflow, not
+    your personal details.
+  </p>
+
+  <h2>Events</h2>
+  <p>No events are scheduled yet. The first workshop is on the <a href={url("/roadmap")}>roadmap</a>.</p>
+
+  <h2>Response expectations</h2>
+  <p>
+    OSEL is maintained by volunteers. We aim for a first response to issues and pull requests within <strong>7 days</strong>.
+    That's a target, not a promise. We'll always tell you what happened to your contribution.
+  </p>
+
+  <h2>Code of Conduct</h2>
+  <p>
+    All OSEL spaces follow the <a href={`${site.repo}/blob/main/CODE_OF_CONDUCT.md`}>Code of Conduct</a>.
+    Report concerns privately to <code>{site.email.conduct}</code>.
+  </p>
+</Base>

@@ -1,0 +1,43 @@
+site_name: OSEL documentation
+site_description: Reproducible, local-first evaluation runs.
+# Set by the Pages workflow (e.g. https://org.github.io/osel/docs/) so absolute links work under a sub-path.
+site_url: !ENV [OSEL_DOCS_URL, "https://osel.example/docs/"]
+repo_url: https://github.com/[osel-org]/osel
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle: { icon: material/brightness-7, name: Switch to dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle: { icon: material/brightness-4, name: Switch to light mode }
+  features: [navigation.sections, content.code.copy, search.highlight]
+markdown_extensions:
+  - admonition
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.superfences
+  - pymdownx.highlight
+nav:
+  - Home: index.md
+  - Installation & upgrading: installation.md
+  - Quick start: quickstart.md
+  - Known limitations: known-limitations.md
+  - Guides:
+      - Concepts: concepts.md
+      - Dataset schema: dataset-schema.md
+      - Evaluation config: config.md
+      - Metrics & custom metrics: metrics.md
+      - Comparing runs & statistics: statistics.md
+      - CI integration: ci-integration.md
+  - Reference:
+      - CLI: cli.md
+      - Run record format: run-record.md
+      - Python API: api.md
+  - Architecture: architecture.md
+  - Troubleshooting: troubleshooting.md
+  - Contributing: contributing.md

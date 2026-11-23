@@ -1,0 +1,5 @@
+name: large-candidate
+dataset: data.jsonl
+predictions: candidate_predictions.jsonl
+metrics: [exact_match]
+seed: 0

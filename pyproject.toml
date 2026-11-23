@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osel"
+dynamic = ["version"]
+description = "Local-first, reproducible evaluation runs: define, run, record, compare, and check for regressions."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "The OSEL contributors" }]
+keywords = ["evaluation", "reproducibility", "regression-testing", "ci"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = ["PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.10", "types-PyYAML", "build>=1.2"]
+docs = ["mkdocs-material>=9.5"]
+
+[project.scripts]
+osel = "osel.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/[osel-org]/osel"
+Documentation = "https://github.com/[osel-org]/osel/tree/main/docs"
+Issues = "https://github.com/[osel-org]/osel/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "osel.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+osel = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+extend-exclude = ["website", "site"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S"]
+ignore = ["S101"]  # assert is fine in tests
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S"]
+# Maintainer scripts: run fixed commands (no user input reaches subprocess); long report strings.
+"scripts/*" = ["S603", "E501"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src/osel"]

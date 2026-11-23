@@ -1,0 +1,25 @@
+---
+import Base from "../../layouts/Base.astro";
+import { url } from "../../site";
+
+interface PostFrontmatter { title: string; date: string; summary: string; draft?: boolean }
+const posts = Object.values(
+  import.meta.glob<{ frontmatter: PostFrontmatter; url: string }>("./*.md", { eager: true })
+)
+  .filter((p) => !p.frontmatter.draft)
+  .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date));
+---
+<Base title="Blog" description="Technical articles, release notes and methodology from OSEL.">
+  <h1>Blog</h1>
+  <p class="muted">Technical articles, release announcements, benchmark methodology and case studies. Factual claims are sourced and limitations are disclosed.</p>
+  {posts.length === 0 && <p>No posts yet.</p>}
+  <ul>
+    {posts.map((p) => (
+      <li>
+        <a href={url(p.url)}>{p.frontmatter.title}</a>{" "}
+        <span class="muted">· <time datetime={p.frontmatter.date}>{p.frontmatter.date}</time></span>
+        <br />{p.frontmatter.summary}
+      </li>
+    ))}
+  </ul>
+</Base>

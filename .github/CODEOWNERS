@@ -1,0 +1,8 @@
+# Replace @[founder-handle] with the real GitHub handle after the organization is created.
+# Security-sensitive paths require the security contact's review.
+*                                  @[founder-handle]
+/src/osel/record.py                @[founder-handle]
+/src/osel/config.py                @[founder-handle]
+/integrations/github-action/       @[founder-handle]
+/.github/workflows/                @[founder-handle]
+/policies/                         @[founder-handle]

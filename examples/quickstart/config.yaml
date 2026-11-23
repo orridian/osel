@@ -1,0 +1,8 @@
+# Baseline evaluation: model v1 predictions on the capitals dataset.
+name: capitals-v1
+dataset: data.jsonl
+predictions: predictions_v1.jsonl
+metrics:
+  - exact_match
+  - token_f1
+seed: 0

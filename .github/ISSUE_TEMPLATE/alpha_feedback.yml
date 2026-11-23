@@ -1,0 +1,49 @@
+name: Alpha feedback
+description: Tried osel? Tell us where it worked and where it got in the way.
+labels: ["alpha-feedback", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing osel! This form is **public**. Do not include API keys, private data,
+        company names you can't share, or personal information.
+  - type: input
+    id: version
+    attributes:
+      label: osel version and OS/Python
+      placeholder: "0.1.0a1 · Windows 11 · Python 3.12"
+    validations:
+      required: true
+  - type: checkboxes
+    id: steps
+    attributes:
+      label: What did you complete?
+      options:
+        - label: Installed osel
+        - label: Ran an evaluation (quick start or own data)
+        - label: Compared two runs
+        - label: Tried a regression check (osel check)
+  - type: dropdown
+    id: time
+    attributes:
+      label: Roughly how long from install to your first successful run?
+      options: ["< 5 min", "5–15 min", "15–30 min", "> 30 min", "Didn't get there"]
+    validations:
+      required: true
+  - type: textarea
+    id: stuck
+    attributes:
+      label: Where did you get stuck or confused? (exact step + what happened)
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What do you evaluate today, and how? (in general terms)
+  - type: textarea
+    id: value
+    attributes:
+      label: Would you use osel again for that? Why or why not?
+  - type: dropdown
+    id: credit
+    attributes:
+      label: May we thank you by GitHub handle in the release notes?
+      options: ["Yes", "No"]

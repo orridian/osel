@@ -1,0 +1,76 @@
+# Builds release artifacts from a version tag, never from a laptop.
+# Publishing to PyPI uses Trusted Publishing (no API token stored). Configure the
+# "pypi" environment and the trusted publisher on PyPI before the first release.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]" build
+      - run: ruff check . && mypy src && pytest
+      - name: Check tag matches package version
+        run: |
+          version=$(python -c "import osel; print(osel.__version__)")
+          test "v$version" = "${GITHUB_REF_NAME}" || { echo "tag ${GITHUB_REF_NAME} != v$version"; exit 1; }
+      - run: python -m build
+      - run: cd dist && sha256sum * > SHA256SUMS.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: dist
+          path: dist/
+
+  github-release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: dist
+          path: dist/
+      - uses: actions/attest-build-provenance@e8998f949152b193b063cb0ec769d69d929409be # v2
+        with:
+          subject-path: "dist/*.whl, dist/*.tar.gz"
+      - name: Create GitHub release (notes are edited from CHANGELOG.md before publishing)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Versions like 0.1.0a1 / 0.2.0rc1 / 0.1.0.dev0 are published as pre-releases.
+          prerelease=""
+          if echo "$GITHUB_REF_NAME" | grep -Eq '(a|b|rc|\.dev)[0-9]+$'; then prerelease="--prerelease"; fi
+          gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" --draft $prerelease \
+            --title "$GITHUB_REF_NAME" --notes "See CHANGELOG.md and docs/known-limitations.md"
+
+  pypi:
+    # OFF until reviewed: publishing happens only when the repository variable
+    # PUBLISH_TO_PYPI is set to "true" (Settings > Secrets and variables > Actions > Variables),
+    # AND a maintainer approves the "pypi" environment. Turn it on only after the license, package
+    # metadata and Trusted Publisher configuration have been reviewed.
+    if: vars.PUBLISH_TO_PYPI == 'true'
+    needs: github-release
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: dist
+          path: dist/
+      - run: rm dist/SHA256SUMS.txt
+      - uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # release/v1

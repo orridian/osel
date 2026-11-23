@@ -1,0 +1,10 @@
+# Evaluate a Python function directly (no predictions file).
+# SECURITY: 'system' and custom metrics import and run Python code. Only run configs you trust.
+name: adder
+dataset: data.jsonl
+system: "my_system:add"
+python_path: ["."]
+metrics:
+  - abs_error
+  - use: "custom_metrics:WithinTolerance"
+    params: { tolerance: 0.000001 }

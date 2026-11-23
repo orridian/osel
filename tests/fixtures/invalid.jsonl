@@ -1,0 +1,8 @@
+{"id": "e1", "input": "ok", "reference": "ok"}
+{"id": "", "input": "empty id"}
+{not json}
+{"id": "e4"}
+{"id": "e5", "input": "x", "refrence": "typo"}
+["not", "an", "object"]
+{"id": "e1", "input": "duplicate"}
+{"id": "e8", "input": "x", "metadata": "not-a-dict"}

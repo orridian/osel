@@ -1,0 +1,75 @@
+name: "osel regression check"
+description: "Run an osel evaluation and fail (or warn) if metrics regress against a baseline run file."
+inputs:
+  config:
+    description: "Path to the evaluation config"
+    required: true
+  baseline:
+    description: "Path to the committed baseline run file"
+    required: true
+  tolerance:
+    description: "Allowed absolute degradation per metric"
+    default: "0"
+  max-drop:
+    description: "Space-separated per-metric limits, e.g. 'exact_match=0.01 token_f1=0.02'"
+    default: ""
+  max-new-errors:
+    description: "Allowed increase in failed examples per metric"
+    default: "0"
+  require-ci:
+    description: "Only fail on a mean drop when the paired confidence interval excludes zero (true/false)"
+    default: "false"
+  missing-baseline:
+    description: "What to do if the baseline file does not exist: fail or warn"
+    default: "fail"
+  mode:
+    description: "fail = regressions fail the job; warn = report only"
+    default: "fail"
+  osel-version:
+    description: "pip requirement for osel (e.g. 'osel==0.1.0a1')"
+    default: "osel"
+outputs:
+  exit-code:
+    description: "osel check exit code (0 ok, 1 regression, 2 invalid input, 3 internal error)"
+    value: ${{ steps.check.outputs.exit-code }}
+runs:
+  using: composite
+  steps:
+    # Inputs are passed through environment variables, never interpolated into the script,
+    # so values containing shell syntax cannot inject commands.
+    - shell: bash
+      env:
+        OSEL_REQ: ${{ inputs.osel-version }}
+      run: python -m pip install "$OSEL_REQ"
+    - shell: bash
+      env:
+        OSEL_CONFIG: ${{ inputs.config }}
+      run: osel eval run "$OSEL_CONFIG" --output "$RUNNER_TEMP/osel-current.json"
+    - id: check
+      shell: bash
+      env:
+        OSEL_BASELINE: ${{ inputs.baseline }}
+        OSEL_TOLERANCE: ${{ inputs.tolerance }}
+        OSEL_MAX_DROP: ${{ inputs.max-drop }}
+        OSEL_MAX_NEW_ERRORS: ${{ inputs.max-new-errors }}
+        OSEL_REQUIRE_CI: ${{ inputs.require-ci }}
+        OSEL_MISSING_BASELINE: ${{ inputs.missing-baseline }}
+        OSEL_MODE: ${{ inputs.mode }}
+      run: |
+        args=(--baseline "$OSEL_BASELINE" --current "$RUNNER_TEMP/osel-current.json"
+              --tolerance "$OSEL_TOLERANCE" --max-new-errors "$OSEL_MAX_NEW_ERRORS"
+              --missing-baseline "$OSEL_MISSING_BASELINE")
+        read -r -a drops <<< "$OSEL_MAX_DROP"
+        for item in "${drops[@]}"; do args+=(--max-drop "$item"); done
+        if [ "$OSEL_REQUIRE_CI" = "true" ]; then args+=(--require-ci); fi
+        set +e
+        osel check "${args[@]}" | tee "$RUNNER_TEMP/osel-check.txt"
+        code=${PIPESTATUS[0]}
+        set -e
+        echo "exit-code=$code" >> "$GITHUB_OUTPUT"
+        { echo '### osel regression check'; echo '```'; cat "$RUNNER_TEMP/osel-check.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+        if [ "$code" -eq 1 ] && [ "$OSEL_MODE" = "warn" ]; then
+          echo "::warning::osel detected a regression (mode=warn, not failing)"
+          exit 0
+        fi
+        exit "$code"

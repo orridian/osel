@@ -1,0 +1,8 @@
+name: adder-buggy
+dataset: data.jsonl
+system: "my_system:buggy_add"
+python_path: ["."]
+metrics:
+  - abs_error
+  - use: "custom_metrics:WithinTolerance"
+    params: { tolerance: 0.000001 }

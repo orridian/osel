@@ -1,0 +1,33 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, url } from "../site";
+---
+<Base title="About" description="OSEL's mission, origin, principles and organization model.">
+  <h1>About OSEL</h1>
+
+  <h2>Mission</h2>
+  <p><strong>Build software that other people genuinely depend on.</strong></p>
+
+  <h2>Origin</h2>
+  <p>
+    OSEL was founded on 11 November 2026 by its Founder and Founding Technical Lead. It began with one problem:
+    evaluation results produced by ad-hoc scripts often can't be reproduced or meaningfully compared, and regressions
+    slip through. The full, dated <a href={`${site.repo}/blob/main/FOUNDING.md`}>founding record</a> is public.
+  </p>
+
+  <h2>Organization model</h2>
+  <p>
+    OSEL is a <strong>founder-led, contributor-powered</strong> open-source project. It is not a company or a registered
+    legal entity. It has one founder and no co-founders or employees. Contributors and, over time, maintainers are listed
+    by their actual roles. See <a href={url("/governance")}>governance</a>.
+  </p>
+
+  <h2>Principles</h2>
+  <ul>
+    <li><strong>Useful software first.</strong> We build for real users before building infrastructure.</li>
+    <li><strong>Transparent evidence.</strong> Claims come with methods, data and limitations.</li>
+    <li><strong>Sustainable maintainership.</strong> Every component has an owner and a maintenance plan.</li>
+    <li><strong>Meaningful participation.</strong> Contributors get real work, timely feedback and credit.</li>
+  </ul>
+  <p>Our values and the behaviors behind them are in <a href={`${site.repo}/blob/main/VALUES.md`}>VALUES.md</a>.</p>
+</Base>

@@ -1,0 +1,4 @@
+{"id": "e1", "input": "2+2", "reference": "4"}
+{"id": "e2", "input": "3+3", "reference": "6", "metadata": {"difficulty": "easy"}}
+
+{"id": "e3", "input": "10/2", "reference": "5"}

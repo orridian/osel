@@ -1,0 +1,31 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, url } from "../site";
+---
+<Base title="Projects" description="OSEL projects and their honest status.">
+  <h1>Projects</h1>
+  <p class="muted">Status labels: planned → prototype → alpha → beta → stable.</p>
+
+  <div class="cards">
+    <div class="card">
+      <p><span class="badge alpha">Alpha</span></p>
+      <h3>A — <code>osel</code> evaluation toolkit</h3>
+      <p><strong>Problem:</strong> evaluation results can't be reproduced or compared reliably, and regressions reach users.</p>
+      <p><strong>Today:</strong> dataset validation, evaluation runs, run records, comparison with confidence intervals, CI checks.</p>
+      <p><a href={site.repo}>Repository</a> · <a href={url(site.docs)}>Documentation</a></p>
+    </div>
+    <div class="card">
+      <p><span class="badge planned">Planned</span></p>
+      <h3>B — Developer Reliability Infrastructure</h3>
+      <p><strong>Problem (hypothesis):</strong> teams lack transparent cross-run test-result comparison and failure grouping.</p>
+      <p>Not started. It begins only when Product A users ask for it and an owner is available.</p>
+    </div>
+    <div class="card">
+      <p><span class="badge planned">Planned</span></p>
+      <h3>C — Benchmark &amp; Reproducibility Ecosystem</h3>
+      <p><strong>Problem (hypothesis):</strong> published performance numbers often lack the metadata needed to reproduce them.</p>
+      <p>Not started. It is gated by the same expansion rule.</p>
+    </div>
+  </div>
+  <p>Products B and C are roadmap hypotheses, not existing products. The rule for starting them is in <a href={`${site.repo}/blob/main/STRATEGY.md`}>STRATEGY.md</a>.</p>
+</Base>

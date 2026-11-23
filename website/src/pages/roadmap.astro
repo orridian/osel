@@ -1,0 +1,51 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, url } from "../site";
+---
+<Base title="Roadmap" description="What OSEL is working on now, next and later.">
+  <h1>Roadmap</h1>
+  <p class="note">Dates are <strong>targets, not guarantees</strong>. The canonical roadmap, with owners and acceptance criteria, is <a href={`${site.repo}/blob/main/ROADMAP.md`}>ROADMAP.md</a>.</p>
+
+  <h2>Now · Nov 2026 – Jan 2027</h2>
+  <ul>
+    <li>User discovery: competitor review and conversations with people who evaluate software.</li>
+    <li><code>osel</code> core workflow (validate → run → record → compare → check). <em>Alpha done.</em></li>
+    <li>CI, packaging and repository standards. <em>Done.</em></li>
+  </ul>
+
+  <h2>Next · Feb – Apr 2027</h2>
+  <ul>
+    <li>Docs site and this website go live.</li>
+    <li>3–5 external alpha testers, with a feedback loop.</li>
+    <li>Contributor onboarding and first good-first-issues.</li>
+    <li>First tagged pre-release, <code>0.1.0</code>.</li>
+  </ul>
+
+  <h2>Later · May 2027 – Feb 2028</h2>
+  <ul>
+    <li>A first repeatable workshop.</li>
+    <li>Reproducibility Program: a first published protocol.</li>
+    <li>Recruiting a second maintainer.</li>
+    <li>A 1.0 decision, and a review of Products B/C against the expansion gate.</li>
+  </ul>
+
+  <h2>Milestones</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Gate</th><th>Evidence required</th></tr></thead>
+    <tbody>
+      <tr><td>G1 — Problem validated</td><td>≥ 8 discovery conversations, ≥ 4 describing concrete recurring pain</td></tr>
+      <tr><td>G2 — Alpha usable</td><td>An independent tester completes the documented workflow unaided</td></tr>
+      <tr><td>G3 — Retention signal</td><td>≥ 3 alpha users run evaluations in more than one week</td></tr>
+      <tr><td>G4 — First stable</td><td>Release policy criteria met; no open P0 bugs</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Decision log and known risks</h2>
+  <p>
+    <a href={`${site.repo}/blob/main/operations/decision-log.md`}>Decision log</a> ·
+    <a href={`${site.repo}/blob/main/operations/risk-register.md`}>Risk register</a>.
+    The biggest risks right now: solving the wrong problem, taking on too much scope, and nobody finding the tool.
+  </p>
+</Base>

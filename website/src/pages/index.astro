@@ -1,0 +1,55 @@
+---
+import Base from "../layouts/Base.astro";
+import { site, url } from "../site";
+---
+<Base>
+  <section class="hero">
+    <p><span class="badge alpha">Alpha · {site.version}</span></p>
+    <h1>Evaluation results you can reproduce, compare and trust.</h1>
+    <p class="lead">
+      OSEL is an open-source engineering organization building reliable, reproducible tools for developers and
+      researchers. Our first tool, <code>osel</code>, records exactly what produced an evaluation result and tells you,
+      honestly, whether a change made things better or worse.
+    </p>
+    <p><a class="btn" href={url(site.docs)}>Read the docs and try it</a></p>
+  </section>
+
+  <h2>Who it's for</h2>
+  <p>
+    Developers and researchers who already evaluate a model, prompt, function or pipeline with scripts, and want
+    reproducible runs and CI regression checks without adopting a platform.
+  </p>
+
+  <h2>What it does today</h2>
+  <div class="cards">
+    <div class="card"><h3>Record</h3><p>Every run stores dataset identity, config (secrets redacted), metric versions, environment and git commit.</p></div>
+    <div class="card"><h3>Compare</h3><p>Paired confidence intervals, plus a refusal to compare runs whose dataset or metric versions differ.</p></div>
+    <div class="card"><h3>Gate CI</h3><p><code>osel check</code> exits 1 on a regression beyond your thresholds. A GitHub Action is included.</p></div>
+  </div>
+
+  <h2>Proof: the quick start</h2>
+  <pre><code>osel eval run config.yaml --output baseline.json
+osel eval run config_v2.yaml --output current.json
+osel check --baseline baseline.json --current current.json
+
+  metric            baseline   current     delta             paired 95% CI  result
+  exact_match         0.8000    0.6000   -0.2000         [-0.5000, 0.0000]  DEGRADED (CI includes 0)
+  token_f1            0.8000    0.7333   -0.0667         [-0.1342, 0.0000]  DEGRADED (CI includes 0)
+
+CHECK FAILED: 2 regression(s)</code></pre>
+  <p class="muted">Output from the bundled example (10 examples), verified in CI. Small datasets give wide intervals, and osel says so.</p>
+
+  <h2>Current status</h2>
+  <p>
+    Alpha, under active development, and not yet published to a package index. We are looking for a few
+    <a href={url("/community")}>alpha testers</a>. See the <a href={url("/roadmap")}>roadmap</a> for what comes next.
+  </p>
+
+  <h2>Quick links</h2>
+  <ul>
+    <li><a href={site.repo}>Source code</a> · <a href={url(site.docs)}>Documentation</a></li>
+    <li><a href={url("/projects")}>Projects and their status</a></li>
+    <li><a href={url("/community")}>How to contribute or ask a question</a></li>
+    <li><a href={url("/security")}>Report a security problem</a></li>
+  </ul>
+</Base>

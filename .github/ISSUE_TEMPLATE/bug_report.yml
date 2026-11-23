@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a reproducible problem with osel.
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not include API keys, passwords, personal data, or confidential datasets.**
+        Security vulnerabilities must be reported privately — see SECURITY.md, not this form.
+  - type: input
+    id: version
+    attributes:
+      label: OSEL version
+      description: Output of `osel --version`
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system and Python version
+      placeholder: "Windows 11, Python 3.12.4"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Exact steps to reproduce (sanitized)
+      placeholder: |
+        1. osel dataset validate data.jsonl
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Minimal example or logs (secrets removed)
+      render: shell
+  - type: dropdown
+    id: latest
+    attributes:
+      label: Reproducible on the latest supported version?
+      options: ["Yes", "No", "Not checked"]
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I removed API keys, passwords, personal data and confidential data from this report.
+          required: true

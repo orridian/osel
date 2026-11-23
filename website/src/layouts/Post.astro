@@ -1,0 +1,17 @@
+---
+import Base from "./Base.astro";
+import { url } from "../site";
+const { frontmatter } = Astro.props;
+---
+<Base title={frontmatter.title} description={frontmatter.summary}>
+  <article>
+    <p class="muted"><a href={url("/blog")}>← Blog</a> · <time datetime={frontmatter.date}>{frontmatter.date}</time></p>
+    <h1>{frontmatter.title}</h1>
+    <slot />
+    <hr />
+    <p class="muted">
+      Questions or feedback? See <a href={url("/community")}>Community</a> ·
+      <a href={url("/docs/")}>Documentation</a>
+    </p>
+  </article>
+</Base>

@@ -1,0 +1,5 @@
+name: large-baseline
+dataset: data.jsonl
+predictions: baseline_predictions.jsonl
+metrics: [exact_match]
+seed: 0

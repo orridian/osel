@@ -1,0 +1,69 @@
+---
+import "../styles/global.css";
+import { site, nav, url } from "../site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = site.tagline } = Astro.props;
+const fullTitle = title ? `${title} · ${site.short}` : `${site.short} — ${site.name}`;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={url("/favicon.svg")} type="image/svg+xml" />
+    <link rel="sitemap" href={url("/sitemap-index.xml")} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a href={url("/")} class="brand" aria-label={`${site.short} home`}>
+          <img src={url("/favicon.svg")} alt="" width="28" height="28" />
+          <span>{site.short}</span>
+        </a>
+        <nav aria-label="Main">
+          <ul>
+            {nav.map((item) => (
+              <li>
+                <a href={url(item.href)} aria-current={path.startsWith(url(item.href).replace(/\/$/, "")) ? "page" : undefined}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>
+          {site.name} · founder-led, contributor-powered open-source project · MIT licensed
+        </p>
+        <ul class="footer-links">
+          <li><a href={url("/governance")}>Governance</a></li>
+          <li><a href={url("/security")}>Security</a></li>
+          <li><a href={url("/privacy")}>Privacy</a></li>
+          <li><a href={url("/contact")}>Contact</a></li>
+          <li><a href={site.repo}>Source</a></li>
+        </ul>
+        <p class="muted">Last updated {site.lastUpdated}. No analytics, no cookies.</p>
+      </div>
+    </footer>
+  </body>
+</html>

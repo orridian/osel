@@ -1,0 +1,10 @@
+{"id": "q01", "input": "What is the capital of France?", "reference": "Paris", "metadata": {"topic": "geography"}}
+{"id": "q02", "input": "What is the capital of Japan?", "reference": "Tokyo", "metadata": {"topic": "geography"}}
+{"id": "q03", "input": "What is the capital of Canada?", "reference": "Ottawa", "metadata": {"topic": "geography"}}
+{"id": "q04", "input": "What is the capital of Australia?", "reference": "Canberra", "metadata": {"topic": "geography"}}
+{"id": "q05", "input": "What is the capital of Kenya?", "reference": "Nairobi", "metadata": {"topic": "geography"}}
+{"id": "q06", "input": "What is the capital of Egypt?", "reference": "Cairo", "metadata": {"topic": "geography"}}
+{"id": "q07", "input": "What is the capital of Germany?", "reference": "Berlin", "metadata": {"topic": "geography"}}
+{"id": "q08", "input": "What is the capital of India?", "reference": "New Delhi", "metadata": {"topic": "geography"}}
+{"id": "q09", "input": "What is the capital of Mexico?", "reference": "Mexico City", "metadata": {"topic": "geography"}}
+{"id": "q10", "input": "What is the capital of Norway?", "reference": "Oslo", "metadata": {"topic": "geography"}}
