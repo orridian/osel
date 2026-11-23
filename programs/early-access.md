@@ -14,7 +14,7 @@
 
 ## What OSEL provides
 
-- A direct feedback channel and a reply to every report (target: 7 days).
+- A direct feedback channel and a reply to every report (target: 14 days).
 - Acknowledgment of useful bug reports in release notes, **with permission**.
 - An invitation to contribute improvements ([good first issues](good-first-issues.md)).
 - Nothing else is promised: no payment, credentials, endorsements or jobs.

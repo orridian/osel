@@ -41,6 +41,23 @@ def test_demo2_regressions(examples_dir: Path) -> None:
     assert all("1 more example(s) failed" in r.reason for r in regs)
 
 
+def test_demo_repo_walkthrough(examples_dir: Path, tmp_path: Path) -> None:
+    repo = tmp_path / "demo-repo"
+    shutil.copytree(examples_dir / "demo-repo", repo)
+    cfg = repo / "evals" / "config.yaml"
+    base = run_evaluation(load_config(cfg))
+    assert base.aggregates["abs_error"]["mean"] == 0.0 and base.aggregates["exact_match"]["mean"] == 1.0
+    cfg.write_text(cfg.read_text(encoding="utf-8").replace('"calculator:add"', '"calculator:add_v2"'),
+                   encoding="utf-8")
+    import sys
+
+    sys.modules.pop("calculator", None)  # the CLI runs each config in a fresh process
+    regs = find_regressions(compare_runs(base, run_evaluation(load_config(cfg))))
+    assert sorted(r.metric for r in regs) == ["abs_error", "exact_match"]
+    assert all("1 more example(s) failed" in r.reason for r in regs)
+    assert (examples_dir / "demo-repo" / ".github" / "workflows" / "eval.yml").is_file()
+
+
 @pytest.mark.parametrize(
     ("scenario", "low", "high", "excludes_zero"),
     [("small", -0.075, 0.15, False), ("large", 0.015, 0.085, True)],

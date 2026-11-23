@@ -48,6 +48,18 @@ Automated checks: run `python scripts/launch_audit.py --report operations/launch
 | 24 | Publish the first technical demonstration | 🔧 | `examples/demos/`; draft posts in `website/drafts/` |
 | 25 | Invite the first external contribution | 🔧 | 5 ready-to-file issues in `programs/good-first-issues.md` |
 
+## Added in the second review pass (23 Nov 2026)
+
+| Item | Status | Where |
+|---|---|---|
+| Response-time promises realistic for one volunteer | ✅ | Security/conduct: 7-day best effort; issues/PRs: 14 days. Tighten only if you can keep it up |
+| Test the release workflow without publishing | 🔧 | Release workflow now has a manual **dry run** (Actions → Release → Run workflow); release/PyPI jobs can't run without a tag |
+| Issue labels | 🔧 | `.github/labels.yml` + `scripts/create_labels.py` |
+| Repo description and topics | 🔧 | `repo-settings.md` |
+| Public demonstration repository | 🔧 | `examples/demo-repo/`, verified by tests; publish as its own repo (e.g. `osel-demo`) |
+| Content calendar (weeks 1–6) | ✅ | `operations/content-calendar.md` |
+| Safe YAML parsing | ✅ | `yaml.safe_load` only |
+
 ## Recommended order for the human steps
 
 1. With a parent/guardian: pick the public name/handle, org name and domain (or skip the domain and use GitHub Pages); review the license and privacy policy.

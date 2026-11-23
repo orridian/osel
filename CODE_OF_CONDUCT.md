@@ -33,7 +33,7 @@ You may report on behalf of someone else. Reports in public issues will be moved
 
 ## 5. Response
 
-1. Acknowledge the report, with a target of 3 days.
+1. Acknowledge the report (best-effort target: 7 days; OSEL is run by a volunteer, so if you hear nothing in 7 days, use the alternate contact).
 2. Assess immediate safety and take interim steps if needed.
 3. Preserve relevant records (links, screenshots, logs).
 4. Investigate fairly, hearing from those involved where safe.

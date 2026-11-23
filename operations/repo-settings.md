@@ -29,6 +29,14 @@ Apply after creating the organization (with a parent/guardian if the provider's 
 
 > While the founder is the only maintainer, they can't get an independent approval. Until a second maintainer exists, the ruleset requires CI only, and each self-merged PR states "self-merged: sole maintainer". This exception is recorded as a decision-log entry.
 
+## Description, topics, labels
+
+- [ ] **Description:** "Alpha: local-first evaluation runs you can reproduce, compare and gate in CI. No account, no telemetry."
+- [ ] **Website:** the GitHub Pages URL (or custom domain)
+- [ ] **Topics:** `evaluation`, `reproducibility`, `regression-testing`, `machine-learning`, `llm-evaluation`, `python`, `cli`, `github-actions`, `statistics`
+- [ ] **Labels:** `python scripts/create_labels.py --repo <org>/osel --apply` (definitions in `.github/labels.yml`)
+- [ ] **Release dry run:** Actions → Release → Run workflow. It builds and checks without publishing. Do this before the first tag.
+
 ## Actions and Pages
 
 - [ ] Settings → Actions → General → Workflow permissions: **Read repository contents** (the default token is read-only; jobs that need more request it explicitly)

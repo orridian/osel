@@ -8,11 +8,11 @@ import { site, url } from "../site";
   <table>
     <thead><tr><th>For</th><th>Use</th><th>Expected response</th></tr></thead>
     <tbody>
-      <tr><td>Bugs and feature requests</td><td><a href={`${site.repo}/issues/new/choose`}>GitHub issues</a></td><td>Target: 7 days</td></tr>
-      <tr><td>Usage questions</td><td><a href={`${site.repo}/discussions`}>GitHub Discussions</a></td><td>Target: 7 days</td></tr>
-      <tr><td>Security vulnerabilities</td><td><a href={url("/security")}>Private reporting</a> · <code>{site.email.security}</code></td><td>Target: 5 days</td></tr>
-      <tr><td>Code of Conduct concerns</td><td><code>{site.email.conduct}</code></td><td>Target: 3 days</td></tr>
-      <tr><td>Everything else</td><td><code>{site.email.hello}</code></td><td>Target: 10 days</td></tr>
+      <tr><td>Bugs and feature requests</td><td><a href={`${site.repo}/issues/new/choose`}>GitHub issues</a></td><td>Best effort: 14 days</td></tr>
+      <tr><td>Usage questions</td><td><a href={`${site.repo}/discussions`}>GitHub Discussions</a></td><td>Best effort: 14 days</td></tr>
+      <tr><td>Security vulnerabilities</td><td><a href={url("/security")}>Private reporting</a> · <code>{site.email.security}</code></td><td>Best effort: 7 days</td></tr>
+      <tr><td>Code of Conduct concerns</td><td><code>{site.email.conduct}</code></td><td>Best effort: 7 days</td></tr>
+      <tr><td>Everything else</td><td><code>{site.email.hello}</code></td><td>Best effort: 14 days</td></tr>
     </tbody>
   </table>
   </div>

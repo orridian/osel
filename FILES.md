@@ -3,7 +3,7 @@
 Every file in this project, what it is, and what it does. The project was built from the *OSEL Master Build & Operations Blueprint* (.docx).
 Not listed (generated, don't upload): `.venv/` (Python environment), `website/node_modules/` (website packages), `site/` and `dist/` (build output).
 
-**Verified locally (launch audit, 22 Nov 2026):** 89 automated tests pass; lint (`ruff`) and strict type checks (`mypy`) are clean; the package builds and the documented quick start passes in a fresh environment with the documented exit codes; the website and docs build together with 0 broken links (603 links) both at a custom-domain root and under a GitHub Pages sub-path; no secrets, personal emails or local paths are in the files; all GitHub Actions are pinned to commit SHAs. Run `python scripts/launch_audit.py` to repeat every check.
+**Verified locally (launch audit, 22 Nov 2026):** 90 automated tests pass; lint (`ruff`) and strict type checks (`mypy`) are clean; the package builds and the documented quick start passes in a fresh environment with the documented exit codes; the website and docs build together with 0 broken links (603 links) both at a custom-domain root and under a GitHub Pages sub-path; no secrets, personal emails or local paths are in the files; all GitHub Actions are pinned to commit SHAs. Run `python scripts/launch_audit.py` to repeat every check.
 
 **Not done yet:** nothing is pushed to GitHub, published or deployed. Placeholders like `[Founder name]`, `[osel-org]` and `[osel-domain]` still need real values (`scripts/set_identity.py` replaces them all). License and privacy policy are *proposed*, pending adult review. The full status is in `operations/launch-checklist.md`.
 
@@ -48,6 +48,7 @@ Not listed (generated, don't upload): `.venv/` (Python environment), `website/no
 | `ISSUE_TEMPLATE/config.yml` | Disables blank issues; links to private security reporting and Discussions |
 | `PULL_REQUEST_TEMPLATE.md` | Summary, motivation, tests, docs, breaking changes, AI-assistance disclosure, confirmations |
 | `CODEOWNERS` | Who must review which paths (security-sensitive files flagged) |
+| `labels.yml` | Issue label definitions (`bug`, `needs reproduction`, `priority: high`, `alpha-feedback`, …) |
 | `dependabot.yml` | Weekly/monthly dependency update checks |
 | `workflows/ci.yml` | CI: lint + types, tests on 3 OSes × 4 Python versions, build + clean-install quick-start test, strict docs build, license check, dependency review |
 | `workflows/release.yml` | On a version tag: run checks, build, checksums, provenance attestation, draft GitHub release, publish to PyPI via Trusted Publishing |
@@ -105,6 +106,7 @@ Not listed (generated, don't upload): `.venv/` (Python environment), `website/no
 | `function-eval/my_system.py` | A correct `add` function and a `buggy_add` function |
 | `function-eval/custom_metrics.py` | Example of writing your own metric |
 | `function-eval/config.yaml`, `config_buggy.yaml` | Evaluate a Python function directly |
+| `demo-repo/` | Standalone demo project to publish as its own repo: baseline → changed function → regression → CI blocks the PR |
 | `demos/README.md` | Index of the three technical demonstrations |
 | `demos/01-reproducibility/README.md` | Same inputs → same result; changed data → comparison refused |
 | `demos/02-regression/README.md` | Thresholds and newly failing examples caught by `osel check` |
@@ -196,6 +198,7 @@ Each policy states its owner, review date, reporting channel and enforcement. `R
 |---|---|
 | `README.md` | Index; explains that private records live outside the repo |
 | `launch-checklist.md` | **The 25-item public-alpha launch checklist with current status** |
+| `content-calendar.md` | Six-week post-launch content plan |
 | `launch-audit-report.md` | Latest output of `scripts/launch_audit.py` |
 | `blueprint-coverage.md` | **Maps every blueprint section to its file and status** (best starting point for a reviewer) |
 | `first-week-actions.md` | Blueprint §17 checklist with status |
@@ -244,6 +247,7 @@ Each policy states its owner, review date, reporting channel and enforcement. `R
 | File | What it does |
 |---|---|
 | `launch_audit.py` | Runs every automated launch check (placeholders, secrets/personal info, versions, workflow pinning, policy status, links, tests, lint, types, clean install, docs + website builds) and lists the human steps. PASS/FAIL/HUMAN report |
+| `create_labels.py` | Creates the labels from `.github/labels.yml` on GitHub via `gh` (dry run by default) |
 | `set_identity.py` | Replaces `[Founder name]`, `[osel-org]`, `[osel-domain]`, `[founder-handle]` everywhere (dry run by default) |
 
 ## 14. Other

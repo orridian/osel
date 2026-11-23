@@ -26,7 +26,7 @@ Do not include real credentials or other people's personal data.
 
 ## What happens next
 
-1. An authorized maintainer acknowledges receipt (target: **5 days**) and records a private tracking ID (`OSEL-SEC-YYYY-NNN`).
+1. An authorized maintainer acknowledges receipt (best-effort target: **7 days**; OSEL is volunteer-run, so if you get no reply in 14 days, please follow up through the same channel) and records a private tracking ID (`OSEL-SEC-YYYY-NNN`).
 2. The maintainer assesses severity, affected versions, exploitability and whether immediate containment is needed.
 3. A fix and tests are prepared privately when public disclosure would expose users.
 4. A disclosure timeline is coordinated with the reporter, normally ≤ 90 days.

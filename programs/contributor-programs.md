@@ -14,7 +14,7 @@
   - [ ] Make the change and add a test
   - [ ] Open a PR using the template
   - [ ] Respond to review
-- Review promptly when capacity allows. The published expectation is a first response within 7 days, as a target.
+- Review promptly when capacity allows. The published expectation is a first response within 14 days, as a target.
 - Thank contributors and explain what happened to the contribution (merged, changes requested, or closed with a reason).
 
 ## Regular Contributor Program

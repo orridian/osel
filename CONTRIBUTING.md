@@ -44,7 +44,7 @@ mkdocs build --strict  # docs (needs: pip install -e ".[docs]")
 
 ## 5. Review expectations
 
-We aim to give a first response within **7 days**. This is a target, not a promise; OSEL is maintained by volunteers. If a PR has had no response after 14 days, a polite ping is welcome.
+We aim to give a first response within **14 days**. This is a target, not a promise; OSEL is maintained by volunteers. If a PR has had no response after 14 days, a polite ping is welcome.
 We will always tell you what happened to your contribution: merged, changes requested, or closed with a reason.
 
 ## 6. AI-assisted contributions

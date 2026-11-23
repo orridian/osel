@@ -1,0 +1,6 @@
+# SECURITY: this config runs Python code (src/calculator.py). Only run configs you trust.
+name: calculator
+dataset: data.jsonl
+system: "calculator:add"
+python_path: ["../src"]
+metrics: [abs_error, exact_match]
