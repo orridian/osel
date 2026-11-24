@@ -1,19 +1,19 @@
 # Issue labels. Create them all after the repo exists:
 #   python scripts/create_labels.py --repo <org>/osel        (dry run)
 #   python scripts/create_labels.py --repo <org>/osel --apply
-- {name: bug, color: d73a4a, description: "Something isn't working"}
-- {name: documentation, color: 0075ca, description: "Instructions are unclear or incomplete"}
-- {name: enhancement, color: a2eeef, description: "New capability request"}
-- {name: good first issue, color: 7057ff, description: "Suitable for a new contributor"}
-- {name: help wanted, color: 008672, description: "An external contribution would be useful"}
-- {name: needs-triage, color: ededed, description: "Not yet reviewed by a maintainer"}
-- {name: needs reproduction, color: fbca04, description: "More information is needed to reproduce"}
-- {name: needs design, color: c5def5, description: "Requires a design decision first"}
-- {name: "priority: high", color: b60205, description: "Important to the alpha"}
-- {name: alpha-feedback, color: 5319e7, description: "Feedback from early-access testers"}
-- {name: compatibility, color: bfd4f2, description: "Platform / Python version / dependency compatibility"}
-- {name: question, color: d876e3, description: "Usage question"}
-- {name: security, color: 000000, description: "Security hardening (never exploit details)"}
-- {name: regression, color: e99695, description: "Worked before, broken now"}
-- {name: accessibility, color: 1d76db, description: "Website/docs/CLI accessibility"}
-- {name: wontfix, color: ffffff, description: "Deliberately outside the project's scope"}
+- {name: bug, color: "d73a4a", description: "Something isn't working"}
+- {name: documentation, color: "0075ca", description: "Instructions are unclear or incomplete"}
+- {name: enhancement, color: "a2eeef", description: "New capability request"}
+- {name: good first issue, color: "7057ff", description: "Suitable for a new contributor"}
+- {name: help wanted, color: "008672", description: "An external contribution would be useful"}
+- {name: needs-triage, color: "ededed", description: "Not yet reviewed by a maintainer"}
+- {name: needs reproduction, color: "fbca04", description: "More information is needed to reproduce"}
+- {name: needs design, color: "c5def5", description: "Requires a design decision first"}
+- {name: "priority: high", color: "b60205", description: "Important to the alpha"}
+- {name: alpha-feedback, color: "5319e7", description: "Feedback from early-access testers"}
+- {name: compatibility, color: "bfd4f2", description: "Platform / Python version / dependency compatibility"}
+- {name: question, color: "d876e3", description: "Usage question"}
+- {name: security, color: "000000", description: "Security hardening (never exploit details)"}
+- {name: regression, color: "e99695", description: "Worked before, broken now"}
+- {name: accessibility, color: "1d76db", description: "Website/docs/CLI accessibility"}
+- {name: wontfix, color: "ffffff", description: "Deliberately outside the project's scope"}
