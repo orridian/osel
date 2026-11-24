@@ -17,7 +17,7 @@ You define an evaluation (a dataset plus either a predictions file or a Python f
 - **compare** two runs with paired confidence intervals. osel refuses the comparison if the dataset or a metric changed;
 - **check** for regressions in CI with explicit thresholds, including examples that newly fail.
 
-Three short [demonstrations](https://github.com/[osel-org]/osel/tree/main/examples/demos) show reproducibility, regression detection, and why an average alone can mislead.
+Three short [demonstrations](https://github.com/orridian/osel/tree/main/examples/demos) show reproducibility, regression detection, and why an average alone can mislead.
 
 ## What it is not (yet)
 

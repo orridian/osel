@@ -11,7 +11,7 @@ Use a virtual environment so osel doesn't affect other projects:
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate
-pip install "git+https://github.com/[osel-org]/osel.git@v0.1.0a1"
+pip install "git+https://github.com/orridian/osel.git@v0.1.0a1"
 osel --version
 ```
 
@@ -24,7 +24,7 @@ If `osel` isn't found after installing, the virtual environment probably isn't a
 ## Upgrading
 
 ```bash
-pip install --upgrade "git+https://github.com/[osel-org]/osel.git@<new-tag>"
+pip install --upgrade "git+https://github.com/orridian/osel.git@<new-tag>"
 ```
 
 Before upgrading:

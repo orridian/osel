@@ -3,7 +3,7 @@
 | Field | Record |
 |---|---|
 | Founding date | 11 November 2026 |
-| Founder | [Founder name] — Founder and Founding Technical Lead |
+| Founder | Lokesh Yarlagadda — Founder and Founding Technical Lead |
 | Co-founders | None. OSEL has one founder. |
 | Organization status | Informal open-source project. No legal entity has been registered. Any registration requires adult-supported legal review (see [GOVERNANCE.md](GOVERNANCE.md)). |
 | Organization model | Founder-led, contributor-powered. |
@@ -40,8 +40,8 @@ Only roles that actually exist are listed. See the [role map](GOVERNANCE.md#role
 
 | Role | Holder | Since |
 |---|---|---|
-| Founder and Founding Technical Lead | [Founder name] | 11 Nov 2026 |
-| Security contact | [Founder name], with trusted adult support | 11 Nov 2026 |
+| Founder and Founding Technical Lead | Lokesh Yarlagadda | 11 Nov 2026 |
+| Security contact | Lokesh Yarlagadda, with trusted adult support | 11 Nov 2026 |
 
 > Titles are used precisely: founder, co-founder, contributor, advisor, maintainer and employee mean different things and are never used interchangeably.
 

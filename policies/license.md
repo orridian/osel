@@ -1,10 +1,10 @@
-# Open-source license policy — PROPOSED (pending review)
+# Open-source license policy
 
 **Owner:** Founder · **Review:** before v0.1.0, then yearly · **Questions:** open an issue labelled `license` · **Enforcement:** PRs that violate this policy are not merged; infringing code is removed.
 
 ## Chosen license
 
-OSEL code is released under the **MIT License** ([LICENSE](../LICENSE)). MIT was chosen as a proposal because it is short, widely understood and compatible with most ecosystems. Apache-2.0 (explicit patent grant) is the main alternative considered. The choice is recorded in the [decision log](../operations/decision-log.md) and **must be confirmed after adult/expert review before the first public release.**
+OSEL code is released under the **MIT License** ([LICENSE](../LICENSE)). MIT was chosen as a proposal because it is short, widely understood and compatible with most ecosystems. Apache-2.0 (explicit patent grant) is the main alternative considered. The choice is recorded in the [decision log](../operations/decision-log.md) and **approved by the founder's parent/guardian on 24 Nov 2026.**
 
 Documentation and website text are under the same license unless a file says otherwise.
 

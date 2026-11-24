@@ -6,10 +6,10 @@ Policies involving legal obligations, privacy, contracts or regulated data need 
 
 | Policy | File | Trigger (when needed) | Status | Owner | Next review |
 |---|---|---|---|---|---|
-| Open-source license | [license.md](license.md) | Before public code release | **Proposed — pending adult/expert review.** Not in force until approved | Founder | Before v0.1.0 |
-| Code of Conduct | [../CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md) | Before inviting community | Text final; **operational once conduct@ and the alternate contact work** | Conduct contacts | May 2027 |
+| Open-source license | [license.md](license.md) | Before public code release | Adopted (MIT). Approved by parent/guardian, 24 Nov 2026 | Founder | Before v0.1.0 |
+| Code of Conduct | [../CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md) | Before inviting community | Text final; **operational once the trusted adult's alternate contact is filled in** | Conduct contacts | May 2027 |
 | Security | [../SECURITY.md](../SECURITY.md) | Before public release | Text final; **operational once private vulnerability reporting is enabled on GitHub** | Security contact | Each release |
-| Privacy | [privacy.md](privacy.md) | Before collecting personal data | **Proposed — pending adult review.** Publish only after review and after checking the live site | Founder + adult reviewer | Before website launch |
+| Privacy | [privacy.md](privacy.md) | Before collecting personal data | Adopted. Approved by parent/guardian, 24 Nov 2026; re-check against the live site at launch | Founder + adult reviewer | Before website launch |
 | Telemetry | [telemetry.md](telemetry.md) | Before telemetry is introduced | Adopted (no telemetry exists) | Founder | Before any telemetry PR |
 | Data handling | [data-handling.md](data-handling.md) | Before handling user-submitted data | Local-storage section in force; user-submitted-data section draft | Founder | When triggered |
 | Contribution | [contribution.md](contribution.md) | Before accepting external PRs | Adopted | Maintainers | May 2027 |

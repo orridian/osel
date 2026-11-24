@@ -1,6 +1,6 @@
 # Contributing
 
-The canonical guide is [CONTRIBUTING.md](https://github.com/[osel-org]/osel/blob/main/CONTRIBUTING.md) in the repository. In short:
+The canonical guide is [CONTRIBUTING.md](https://github.com/orridian/osel/blob/main/CONTRIBUTING.md) in the repository. In short:
 
 ```bash
 pip install -e ".[dev]"

@@ -1,13 +1,13 @@
 # osel demo repository
 
-A tiny project that gates its pull requests on an [osel](https://github.com/[osel-org]/osel) evaluation.
-Publish this folder as its **own** GitHub repository (e.g. `[osel-org]/osel-demo`). It exercises the
+A tiny project that gates its pull requests on an [osel](https://github.com/orridian/osel) evaluation.
+Publish this folder as its **own** GitHub repository (e.g. `orridian/osel-demo`). It exercises the
 GitHub Action exactly as an outside project would.
 
 ## Walkthrough (expected outputs verified in OSEL's test suite)
 
 ```bash
-pip install "git+https://github.com/[osel-org]/osel.git@v0.1.0a1"
+pip install "git+https://github.com/orridian/osel.git@v0.1.0a1"
 cd evals
 osel eval run config.yaml --output baseline.json     # abs_error 0.0, exact_match 1.0, 6 examples
 git add baseline.json && git commit -m "Add evaluation baseline"

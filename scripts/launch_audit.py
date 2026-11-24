@@ -30,7 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SKIP_DIRS = {".git", ".venv", "node_modules", "dist", "site", ".astro", "__pycache__", ".pytest_cache",
              ".mypy_cache", ".ruff_cache", "build", "public"}
-PLACEHOLDERS = ["[Founder name]", "[osel-org]", "[osel-domain]", "[founder-handle]"]
+PLACEHOLDERS = ["[Founder name]", "[osel-org]", "[osel-domain]", "[founder-handle]", "[conduct-alternate-contact]"]
 SECRET_PATTERNS = {
     "private key block": re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
     "OpenAI-style key": re.compile(r"\bsk-[A-Za-z0-9_-]{20,}"),
@@ -41,6 +41,7 @@ SECRET_PATTERNS = {
 }
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 ALLOWED_EMAIL_DOMAINS = ("example.com", "example.org", "anthropic.com", "users.noreply.github.com")
+ALLOWED_EMAILS = {"orridian.contact@gmail.com"}  # the approved public role address
 HOME_PATH = re.compile(r"([A-Za-z]:\\\\?Users\\\\?[^\\/\s\"']+|/(?:home|Users)/[a-z][^/\s\"']*/)", re.IGNORECASE)
 
 results: list[tuple[str, str, str]] = []
@@ -83,7 +84,7 @@ def read(p: Path) -> str | None:
 def check_placeholders(files: list[Path]) -> None:
     counts: dict[str, int] = {ph: 0 for ph in PLACEHOLDERS}
     for f in files:
-        if f.name in ("set_identity.py", "launch_audit.py"):
+        if f.name in ("set_identity.py", "launch_audit.py", "launch-audit-report.md"):
             continue
         text = read(f) or ""
         for ph in PLACEHOLDERS:
@@ -110,7 +111,7 @@ def check_secrets_and_personal_info(files: list[Path]) -> None:
                 hits.append(f"{rel}: {label}")
         for m in EMAIL.findall(text):
             domain = m.split("@", 1)[1].lower()
-            if "[osel-domain]" in m or domain.endswith(ALLOWED_EMAIL_DOMAINS) or m.startswith("git@"):
+            if m.lower() in ALLOWED_EMAILS or "[osel-domain]" in m or domain.endswith(ALLOWED_EMAIL_DOMAINS) or m.startswith("git@"):
                 continue
             emails.add(f"{m} ({rel})")
         if HOME_PATH.search(text) and f.suffix not in (".lock",):

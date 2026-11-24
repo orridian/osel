@@ -1,6 +1,6 @@
 # Incident response policy
 
-**Owner:** Security contact · **Review:** every 6 months · **Channel:** `security@[osel-domain]` (external), private maintainer channel (internal) · **Enforcement:** every SEV1/SEV2 has a post-incident review.
+**Owner:** Security contact · **Review:** every 6 months · **Channel:** GitHub private vulnerability reporting (external), private maintainer channel (internal) · **Enforcement:** every SEV1/SEV2 has a post-incident review.
 
 ## Scope
 

@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - uses: [osel-org]/osel/integrations/github-action@v0.1.0
+      - uses: orridian/osel/integrations/github-action@v0.1.0a1
         with:
           config: evals/config.yaml
           baseline: evals/baseline.json

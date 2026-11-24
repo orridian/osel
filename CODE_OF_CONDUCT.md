@@ -2,7 +2,7 @@
 
 | Owner | Review date | Reporting channel |
 |---|---|---|
-| Conduct contacts (currently the Founder, with a trusted adult as alternate) | Every 6 months; next: May 2027 | `conduct@[osel-domain]` · alternate: `conduct-alt@[osel-domain]` |
+| Conduct contacts (currently the Founder, with a trusted adult as alternate) | Every 6 months; next: May 2027 | `orridian.contact@gmail.com` · alternate: [conduct-alternate-contact] |
 
 ## 1. Scope
 
@@ -28,7 +28,7 @@ We expect:
 
 ## 4. Reporting
 
-Report privately to `conduct@[osel-domain]`. If the primary contact is involved in the incident, use the alternate route `conduct-alt@[osel-domain]`. It goes to a trusted adult who is not the primary contact.
+Report privately to `orridian.contact@gmail.com` (subject line: "Conduct report"). If the primary contact is involved in the incident, use the alternate route: [conduct-alternate-contact]. It goes to a trusted adult who is not the primary contact.
 You may report on behalf of someone else. Reports in public issues will be moved to private handling.
 
 ## 5. Response

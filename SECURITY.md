@@ -2,7 +2,7 @@
 
 | Owner | Review date | Reporting channel |
 |---|---|---|
-| Security contact (Founder, with trusted adult support) | Every release, and at least every 6 months | GitHub **private vulnerability reporting** on this repository, or `security@[osel-domain]` |
+| Security contact (Founder, with trusted adult support) | Every release, and at least every 6 months | GitHub **private vulnerability reporting** on this repository ([report a vulnerability](https://github.com/orridian/osel/security/advisories/new)). Not the general inbox. |
 
 ## Supported versions
 
@@ -15,7 +15,7 @@ Before 1.0, only the latest minor release receives fixes.
 
 ## Reporting a vulnerability
 
-**Do not open a public issue for security problems.** Report privately using GitHub's "Report a vulnerability" button (Security tab), or by email to `security@[osel-domain]`. Please include:
+**Do not open a public issue for security problems.** Report privately using GitHub's "Report a vulnerability" button (Security tab): https://github.com/orridian/osel/security/advisories/new. Do not email vulnerability details to the general contact inbox. Please include:
 
 - the affected version;
 - a description and the impact;

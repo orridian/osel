@@ -1,6 +1,6 @@
 # Records and retention policy
 
-**Owner:** Founder · **Review:** yearly · **Channel:** `privacy@[osel-domain]` · **Enforcement:** quarterly audit (see [operations/cadence.md](../operations/cadence.md)).
+**Owner:** Founder · **Review:** yearly · **Channel:** `orridian.contact@gmail.com` · **Enforcement:** quarterly audit (see [operations/cadence.md](../operations/cadence.md)).
 
 | Record | Why kept | Access | Retention |
 |---|---|---|---|

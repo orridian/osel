@@ -7,7 +7,7 @@ Maps every section of the *OSEL Master Build & Operations Blueprint* to its impl
 |---|---|---|---|
 | 0 | Priorities P0/P1/P2, definition of complete | [ownership.md](ownership.md) (owner, purpose, implementation, test, maintenance per component) | ✅ |
 | 1.1 | Identity | [FOUNDING.md](../FOUNDING.md); name/domain conflict check | 🟡 name check is 👤 |
-| 1.2 | FOUNDING, MISSION, VISION, VALUES, STRATEGY, ROADMAP, METRICS, GOVERNANCE | repo root | ✅ drafts; replace `[Founder name]` |
+| 1.2 | FOUNDING, MISSION, VISION, VALUES, STRATEGY, ROADMAP, METRICS, GOVERNANCE | repo root | ✅ drafts; replace `Lokesh Yarlagadda` |
 | 1.3 | Founder evidence archive | [founder-evidence-archive.md](founder-evidence-archive.md) | 🟡 create the private archive |
 | 2.1 | Website: /, /about, /projects, /roadmap, /community, /governance, /security, /privacy, /contact, /blog | [website/](../website/) (Astro, 12 pages, link-checked) | ✅ built · 🟡 not deployed |
 | 2.2 | Web stack: Astro, static host, MkDocs, no analytics, role email | website/, mkdocs.yml | 🟡 host, domain, email are 👤 with adult help |

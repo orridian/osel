@@ -1,6 +1,6 @@
 # Good first issues (ready to file)
 
-File these with the labels `good first issue` and `help wanted`. Maintainer contact: @[founder-handle].
+File these with the labels `good first issue` and `help wanted`. Maintainer contact: @lokeshyarlagadda473.
 
 ---
 

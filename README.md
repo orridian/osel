@@ -2,7 +2,7 @@
 
 **`osel`: define an evaluation, run it, record exactly what produced the result, compare it with a baseline, and fail CI on regressions. Local-first, file-based, no account needed.**
 
-> **Status: alpha (`0.1.0.dev0`).** Interfaces may change before 1.0. Not yet published to PyPI.
+> **Status: alpha (`0.1.0a1`).** Interfaces may change before 1.0. Not yet published to PyPI. OSEL is the flagship initiative of [Orridian](https://orridian.github.io).
 
 ## What it does
 
@@ -19,7 +19,7 @@
 Requires Python 3.10+. Until the first release, install from source:
 
 ```bash
-git clone https://github.com/[osel-org]/osel.git && cd osel
+git clone https://github.com/orridian/osel.git && cd osel
 pip install .
 cd examples/quickstart
 osel dataset validate data.jsonl

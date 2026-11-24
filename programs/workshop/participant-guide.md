@@ -3,7 +3,7 @@
 ## Setup (before the workshop, about 10 min)
 
 ```bash
-git clone https://github.com/[osel-org]/osel.git
+git clone https://github.com/orridian/osel.git
 cd osel
 python -m venv .venv
 # Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate

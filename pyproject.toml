@@ -29,9 +29,9 @@ docs = ["mkdocs-material>=9.5"]
 osel = "osel.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/[osel-org]/osel"
-Documentation = "https://github.com/[osel-org]/osel/tree/main/docs"
-Issues = "https://github.com/[osel-org]/osel/issues"
+Homepage = "https://github.com/orridian/osel"
+Documentation = "https://github.com/orridian/osel/tree/main/docs"
+Issues = "https://github.com/orridian/osel/issues"
 
 [tool.setuptools.dynamic]
 version = { attr = "osel.__version__" }

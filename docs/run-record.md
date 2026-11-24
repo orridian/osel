@@ -6,12 +6,12 @@
   "run_id": "20261112T042444Z-113b33db",
   "created_at": "2026-11-12T04:24:44.857616Z",
   "name": "capitals-v1",
-  "osel_version": "0.1.0.dev0",
+  "osel_version": "0.1.0a1",
   "config": { "...": "the config as written, secrets redacted" },
   "dataset": { "path": "data.jsonl", "identity": "sha256:…", "n_examples": 10, "schema_version": "1" },
   "metrics": { "exact_match": { "version": "1", "higher_is_better": true } },
   "environment": {
-    "osel_version": "0.1.0.dev0", "python_version": "3.12.4", "python_implementation": "CPython",
+    "osel_version": "0.1.0a1", "python_version": "3.12.4", "python_implementation": "CPython",
     "platform": "Linux-6.8-x86_64", "machine": "x86_64", "byteorder": "little",
     "git": { "commit": "abc123…", "dirty": false }
   },

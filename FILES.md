@@ -5,7 +5,7 @@ Not listed (generated, don't upload): `.venv/` (Python environment), `website/no
 
 **Verified locally (launch audit, 22 Nov 2026):** 90 automated tests pass; lint (`ruff`) and strict type checks (`mypy`) are clean; the package builds and the documented quick start passes in a fresh environment with the documented exit codes; the website and docs build together with 0 broken links (603 links) both at a custom-domain root and under a GitHub Pages sub-path; no secrets, personal emails or local paths are in the files; all GitHub Actions are pinned to commit SHAs. Run `python scripts/launch_audit.py` to repeat every check.
 
-**Not done yet:** nothing is pushed to GitHub, published or deployed. Placeholders like `[Founder name]`, `[osel-org]` and `[osel-domain]` still need real values (`scripts/set_identity.py` replaces them all). License and privacy policy are *proposed*, pending adult review. The full status is in `operations/launch-checklist.md`.
+**Not done yet:** nothing is pushed to GitHub, published to PyPI or deployed. The GitHub organization `orridian` must be created by the founder in the web UI first. One placeholder remains: `[conduct-alternate-contact]` (the trusted adult's contact route for Code of Conduct reports). Identity is filled in (Orridian / Lokesh Yarlagadda / `lokeshyarlagadda473`), the version is `0.1.0a1`, and license and privacy policy are approved by a parent/guardian. Full status: `operations/launch-checklist.md` and `operations/execution-report-2026-11-24.md`.
 
 ---
 
@@ -248,7 +248,7 @@ Each policy states its owner, review date, reporting channel and enforcement. `R
 |---|---|
 | `launch_audit.py` | Runs every automated launch check (placeholders, secrets/personal info, versions, workflow pinning, policy status, links, tests, lint, types, clean install, docs + website builds) and lists the human steps. PASS/FAIL/HUMAN report |
 | `create_labels.py` | Creates the labels from `.github/labels.yml` on GitHub via `gh` (dry run by default) |
-| `set_identity.py` | Replaces `[Founder name]`, `[osel-org]`, `[osel-domain]`, `[founder-handle]` everywhere (dry run by default) |
+| `set_identity.py` | Replaces the identity placeholders everywhere (already applied 24 Nov 2026; kept for reference) |
 
 ## 14. Other
 

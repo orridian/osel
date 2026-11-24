@@ -5,7 +5,7 @@ Format: ID · date · decision · evidence/reasoning · alternatives · owner ·
 | ID | Date | Decision | Evidence / reasoning | Alternatives considered | Owner | Status |
 |---|---|---|---|---|---|---|
 | D-001 | 2026-11-11 | One monorepo (`osel`) holds code, docs, website, policies and operations | Components are tightly coupled; one founder; simpler CI. Split a component when independent versioning, ownership or cadence justifies it | Five separate repos (blueprint §3.1) | Founder | Accepted |
-| D-002 | 2026-11-11 | License: MIT (proposed) | Short, widely understood, compatible | Apache-2.0 (explicit patent grant) | Founder | **Pending adult/expert review** before first release |
+| D-002 | 2026-11-11 | License: MIT (proposed) | Short, widely understood, compatible | Apache-2.0 (explicit patent grant) | Founder | Accepted. Approved by parent/guardian 24 Nov 2026 |
 | D-003 | 2026-11-11 | Python ≥ 3.10, setuptools + pyproject | Broad compatibility; standard tooling | Poetry, Hatch | Founder | Accepted |
 | D-004 | 2026-11-11 | CLI uses argparse | Zero extra dependencies; adequate help output | Typer | Founder | Accepted |
 | D-005 | 2026-11-11 | Validation uses dataclasses and hand-written checks | Small schemas; avoids a heavy dependency | Pydantic | Founder | Accepted; revisit if schemas grow |

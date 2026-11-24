@@ -1,6 +1,6 @@
 # Community event policy — DRAFT (adopt before first public event)
 
-**Owner:** Community organizer (Founder until appointed) · **Channel:** `events@[osel-domain]`; at events, the named on-site/online moderator · **Enforcement:** Code of Conduct procedures apply.
+**Owner:** Community organizer (Founder until appointed) · **Channel:** `orridian.contact@gmail.com`; at events, the named on-site/online moderator · **Enforcement:** Code of Conduct procedures apply.
 
 - **Registration data:** collect only name/handle and contact email. Optional accessibility needs are deleted 30 days after the event. No dates of birth or addresses.
 - **Minors:** events involving under-18 participants have an adult supervisor present, and follow the host venue's safeguarding rules.

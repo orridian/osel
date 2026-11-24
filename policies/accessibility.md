@@ -1,6 +1,6 @@
 # Accessibility policy
 
-**Owner:** Founder · **Review:** every website release · **Channel:** issue labelled `accessibility` or `hello@[osel-domain]` · **Enforcement:** accessibility regressions are treated as bugs and block a website release.
+**Owner:** Founder · **Review:** every website release · **Channel:** issue labelled `accessibility` or `orridian.contact@gmail.com` · **Enforcement:** accessibility regressions are treated as bugs and block a website release.
 
 - **Target:** WCAG 2.2 AA for the website and docs.
 - **Keyboard:** every interactive element is reachable and usable by keyboard, with a visible focus indicator and a skip link.

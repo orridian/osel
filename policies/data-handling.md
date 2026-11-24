@@ -1,6 +1,6 @@
 # Data handling policy
 
-**Owner:** Founder · **Contact:** `privacy@[osel-domain]` · **Enforcement:** data received outside this policy is deleted.
+**Owner:** Founder · **Contact:** `orridian.contact@gmail.com` · **Enforcement:** data received outside this policy is deleted.
 
 ## Part A — How the `osel` software handles your data (IN FORCE: describes current behavior)
 

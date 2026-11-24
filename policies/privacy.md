@@ -1,6 +1,6 @@
-# Privacy policy — PROPOSED (pending adult review)
+# Privacy policy
 
-**Owner:** Founder, reviewed by a parent/guardian or qualified adult · **Last reviewed:** _pending review_ · **Contact:** `privacy@[osel-domain]` · **Enforcement:** any change that collects new personal data must update this policy first, or it is reverted.
+**Owner:** Founder, reviewed by a parent/guardian or qualified adult · **Last reviewed:** 24 Nov 2026 (approved by parent/guardian) · **Contact:** `orridian.contact@gmail.com` · **Enforcement:** any change that collects new personal data must update this policy first, or it is reverted.
 
 > This policy describes **actual current practice**. Re-check it against the real website and tools before every website launch or change.
 

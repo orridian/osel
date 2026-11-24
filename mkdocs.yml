@@ -2,7 +2,7 @@ site_name: OSEL documentation
 site_description: Reproducible, local-first evaluation runs.
 # Set by the Pages workflow (e.g. https://org.github.io/osel/docs/) so absolute links work under a sub-path.
 site_url: !ENV [OSEL_DOCS_URL, "https://osel.example/docs/"]
-repo_url: https://github.com/[osel-org]/osel
+repo_url: https://github.com/orridian/osel
 edit_uri: edit/main/docs/
 theme:
   name: material

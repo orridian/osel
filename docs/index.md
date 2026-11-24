@@ -3,7 +3,7 @@
 `osel` lets you **define** an evaluation, **run** it, **preserve** exactly what produced the result, **compare** it with a baseline, and **reproduce or inspect** it later.
 
 !!! note "Status"
-    Alpha (`0.1.0.dev0`). The CLI and file formats may change before 1.0. Every change is listed in the changelog.
+    Alpha (`0.1.0a1`). The CLI and file formats may change before 1.0. Every change is listed in the changelog.
 
 | I want to… | Read |
 |---|---|

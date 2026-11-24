@@ -8,7 +8,7 @@ Please read the [Code of Conduct](CODE_OF_CONDUCT.md) and the [contribution poli
 Requirements: Python 3.10+ and git.
 
 ```bash
-git clone https://github.com/[osel-org]/osel.git
+git clone https://github.com/orridian/osel.git
 cd osel
 python -m venv .venv
 # Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate

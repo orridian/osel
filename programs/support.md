@@ -6,8 +6,8 @@
 | Feature request | GitHub Issues → Feature request template | Problem, who/workflow, workaround and why it's inadequate, desired outcome, success measure, implications |
 | Docs problem | GitHub Issues → Documentation template | |
 | Usage question | GitHub Discussions (Q&A) | Enabled once moderation capacity exists. Until then, use issues labelled `question` |
-| Vulnerability | Private reporting / `security@` | Never public |
-| General contact | `hello@[osel-domain]` | |
+| Vulnerability | GitHub private vulnerability reporting | Never public |
+| General contact | `orridian.contact@gmail.com` | |
 
 **Never ask users to post** secrets, private datasets, credentials or personal information. If someone does, hide or edit the comment, tell them privately, and advise them to rotate any exposed credential.
 

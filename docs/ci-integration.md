@@ -3,7 +3,7 @@
 ## GitHub Actions (composite action)
 
 ```yaml
-- uses: [osel-org]/osel/integrations/github-action@v0.1.0
+- uses: orridian/osel/integrations/github-action@v0.1.0a1
   with:
     config: evals/config.yaml
     baseline: evals/baseline.json

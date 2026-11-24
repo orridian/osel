@@ -4,7 +4,7 @@
 |---|---|---|---|
 | 1 | Private OSEL planning folder with the blueprint inside | 👤 To do | Keep it outside this public repo, e.g. `Documents/OSEL-private/`. Put the blueprint .docx there |
 | 2 | Project board: Backlog, Ready, In Progress, Review, Blocked, Done | 🟡 Defined | [project-board.md](project-board.md). Create it in GitHub Projects after the org exists |
-| 3 | Founding documents as drafts; no unreviewed legal/privacy claims | ✅ Drafted | Replace `[Founder name]`; license and privacy marked for review |
+| 3 | Founding documents as drafts; no unreviewed legal/privacy claims | ✅ Drafted | Identity filled in (24 Nov 2026); license and privacy marked for review |
 | 4 | Competitor matrix (six projects) | 🟡 Started | [competitor-matrix.md](competitor-matrix.md). Verify every cell from primary sources |
 | 5 | 10 candidate user problems in testable language | ✅ Drafted | [user-problems.md](user-problems.md) |
 | 6 | List of 30 potential interviewees from public professional/community contacts | 👤 To do | Use the template in [interview-kit.md](interview-kit.md). Record public role/handle only |

@@ -12,7 +12,7 @@ Apply after creating the organization (with a parent/guardian if the provider's 
 
 ## Repository `osel`
 
-- [ ] Replace placeholders: `[osel-org]`, `[osel-domain]`, `@[founder-handle]`, `[Founder name]`. Search: `grep -rn "\[osel-\|\[Founder\|\[founder-" .`
+- [x] Identity placeholders replaced (24 Nov 2026). Remaining: `[conduct-alternate-contact]` (trusted adult's contact route)
 - [ ] **Private vulnerability reporting:** on (Settings → Security)
 - [ ] **Secret scanning + push protection:** on
 - [ ] **Dependabot alerts and security updates:** on
@@ -56,6 +56,6 @@ Apply after creating the organization (with a parent/guardian if the provider's 
 Some of this can be scripted with `gh`, for example:
 
 ```bash
-gh repo create [osel-org]/osel --public --source . --push
-gh api -X PUT repos/[osel-org]/osel/private-vulnerability-reporting
+gh repo create orridian/osel --public --source . --push
+gh api -X PUT repos/orridian/osel/private-vulnerability-reporting
 ```

@@ -26,11 +26,11 @@ One person may hold several roles at first. Only filled roles are listed as fill
 
 | Role | Responsibilities | When appointed | Current holder |
 |---|---|---|---|
-| Founder / Founding Technical Lead | Mission, product direction, technical standards, early releases, community formation | At founding | [Founder name] |
-| Project maintainer | Technical quality, reviews, releases, triage, component roadmap | When a contributor shows sustained capability | [Founder name] (only maintainer) |
+| Founder / Founding Technical Lead | Mission, product direction, technical standards, early releases, community formation | At founding | Lokesh Yarlagadda |
+| Project maintainer | Technical quality, reviews, releases, triage, component roadmap | When a contributor shows sustained capability | Lokesh Yarlagadda (only maintainer) |
 | Documentation lead | Docs quality, tutorials, release docs, onboarding | When docs work becomes recurring | _unfilled_ |
 | Community organizer | Events, discussions, welcome, moderation coordination | When community activity justifies it | _unfilled_ |
-| Security contact | Private vulnerability intake and coordinated response | Before public release | [Founder name] + trusted adult |
+| Security contact | Private vulnerability intake and coordinated response | Before public release | Lokesh Yarlagadda + trusted adult |
 | Research lead | Protocol quality, reproducibility, research collaborations | When real research work and a qualified collaborator exist | _unfilled_ |
 
 ## Becoming a maintainer

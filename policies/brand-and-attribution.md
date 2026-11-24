@@ -1,6 +1,6 @@
 # Brand and attribution policy
 
-**Owner:** Founder · **Review:** yearly · **Channel:** `hello@[osel-domain]` · **Enforcement:** inaccurate claims must be corrected; permission to use the name or logo can be withdrawn.
+**Owner:** Founder · **Review:** yearly · **Channel:** `orridian.contact@gmail.com` · **Enforcement:** inaccurate claims must be corrected; permission to use the name or logo can be withdrawn.
 
 - **Name and logo.** You may use "OSEL" and the logo to refer to the project accurately, e.g. "uses OSEL" or "built with OSEL". Don't modify the logo or use it in a way that suggests endorsement.
 - **Endorsement.** Only the Founding Technical Lead can state that OSEL endorses, partners with, or is officially affiliated with anything. Such statements require written agreement from both sides.

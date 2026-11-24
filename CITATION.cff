@@ -4,9 +4,9 @@ title: "OSEL: reproducible, local-first evaluation toolkit"
 type: software
 authors:
   - name: "The OSEL contributors"
-version: 0.1.0.dev0
+version: 0.1.0a1
 license: MIT
-repository-code: "https://github.com/[osel-org]/osel"
+repository-code: "https://github.com/orridian/osel"
 keywords:
   - evaluation
   - reproducibility

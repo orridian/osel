@@ -1,6 +1,6 @@
 # Research integrity policy — DRAFT (not in force)
 
-**Trigger:** before formal research collaborations. **Owner:** Research lead (Founder until appointed) · **Channel:** `research@[osel-domain]` · **Enforcement:** outputs that don't meet this policy are not published under the OSEL name; published errors are corrected publicly.
+**Trigger:** before formal research collaborations. **Owner:** Research lead (Founder until appointed) · **Channel:** `orridian.contact@gmail.com` · **Enforcement:** outputs that don't meet this policy are not published under the OSEL name; published errors are corrected publicly.
 
 1. **Reproducibility.** Code, configs and exact software versions are published. Data is published, or referenced where licensing forbids redistribution.
 2. **Data provenance.** Every dataset records source, version or hash, license and any filtering or exclusions.

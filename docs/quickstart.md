@@ -8,14 +8,14 @@
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\activate   ·   macOS/Linux: source .venv/bin/activate
-pip install "git+https://github.com/[osel-org]/osel.git"   # PyPI release pending
+pip install "git+https://github.com/orridian/osel.git"   # PyPI release pending
 osel --version
 ```
 
 ## Run the example
 
 ```bash
-git clone https://github.com/[osel-org]/osel.git
+git clone https://github.com/orridian/osel.git
 cd osel/examples/quickstart
 osel dataset validate data.jsonl
 ```
