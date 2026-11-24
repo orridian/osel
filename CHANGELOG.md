@@ -5,6 +5,8 @@ Versioning: see [policies/release.md](policies/release.md).
 
 ## [Unreleased]
 
+## [0.1.0a1] — 2026-11-24 (first public alpha)
+
 ### Added
 - Dataset schema v1 (`id`, `input`, optional `reference`, `metadata`) with row-level validation errors.
 - JSON/JSONL dataset loader with explicit encoding and content-derived dataset identity.

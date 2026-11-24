@@ -1,6 +1,5 @@
-# osel v0.1.0a1 — first public alpha (DRAFT release notes)
+# osel v0.1.0a1 — first public alpha
 
-> Draft. Finalize when the release is tagged. The version in `src/osel/__init__.py` becomes `0.1.0a1` as step 6 of the release checklist.
 
 **This is an alpha.** It's ready for evaluation by early testers, but not for production use. Interfaces and file formats may change before 1.0.
 
