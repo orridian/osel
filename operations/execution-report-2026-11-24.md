@@ -29,8 +29,8 @@ Full machine output: [launch-audit-report.md](launch-audit-report.md).
 | Contacts: general → `orridian.contact@gmail.com`; **security → GitHub private vulnerability reporting only** (never the inbox); conduct → inbox + trusted-adult alternate | SECURITY, CoC, policies, website | Implemented |
 | Version `0.1.0a1` in package, CITATION.cff, website | 3 files + docs | Tested (audit consistency check) |
 | License (MIT) and privacy policy marked **Adopted**, recording the parent/guardian approval you reported | policies/README, license.md, privacy.md, decision log | Implemented |
-| Orridian homepage (static HTML) for `orridian/orridian.github.io` | `C:\Users\godboss\orridian.github.io\` (own git repo) | Implemented; previewed desktop + 375px, no overflow |
-| Org profile README for `orridian/.github` | `C:\Users\godboss\orridian-dotgithub\profile\README.md` (own git repo) | Implemented |
+| Orridian homepage (static HTML) for `orridian/orridian.github.io` | repo `orridian/orridian.github.io` | Implemented; previewed desktop + 375px, no overflow |
+| Org profile README for `orridian/.github` | repo `orridian/.github` (`profile/README.md`) | Implemented |
 | OSEL site footer: "a flagship initiative of Orridian" | Base.astro, README | Implemented |
 | Earlier today's passes: 5 bug fixes, edge-case tests, demos, demo repo, early access program, release dry-run, labels | see CHANGELOG | Tested |
 
@@ -62,7 +62,7 @@ Moonshot metrics: all are **0 / not yet measurable**. Definitions are in METRICS
 ## 5. Blockers that need you (or a parent/guardian)
 
 1. **Create the GitHub org `orridian`** at github.com/organizations/plan (Free plan). This accepts GitHub's terms, so do it with your parent or guardian. GitHub doesn't allow org creation through the API from a personal account. Turn on 2FA, and add a trusted adult as a second owner.
-2. **Trusted adult's alternate contact for Code of Conduct reports** (an email they agree to have published, or a route like "message @their-github-handle"). This fills `[conduct-alternate-contact]`.
+2. **Trusted adult's alternate contact for Code of Conduct reports** (an email they agree to have published, or a route like "message @their-github-handle"). Resolved 26 Nov 2026: GitHub abuse reporting is the independent alternate for now.
 3. **Approval to push and publish** once the org exists. Then I can run, with your approval: create the 3 repos, push, enable Pages, private vulnerability reporting, Discussions with the 4 categories, labels, the 5 good first issues, and the branch ruleset. I'll verify each step.
 4. **PyPI:** you create the PyPI account (adult involvement) and add a "pending publisher" for project `osel`, owner `orridian`, repo `osel`, workflow `release.yml`, environment `pypi`. Publishing happens only after you've reviewed a release summary.
 5. **Check that `orridian.contact@gmail.com` works** by sending a test email from another account.
