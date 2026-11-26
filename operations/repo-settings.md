@@ -12,7 +12,7 @@ Apply after creating the organization (with a parent/guardian if the provider's 
 
 ## Repository `osel`
 
-- [x] Identity placeholders replaced (24 Nov 2026). Remaining: `[conduct-alternate-contact]` (trusted adult's contact route)
+- [x] Identity placeholders replaced (24 Nov 2026). Conduct alternate: GitHub abuse reporting (add a trusted adult later)
 - [ ] **Private vulnerability reporting:** on (Settings → Security)
 - [ ] **Secret scanning + push protection:** on
 - [ ] **Dependabot alerts and security updates:** on
