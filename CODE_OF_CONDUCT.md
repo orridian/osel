@@ -2,7 +2,7 @@
 
 | Owner | Review date | Reporting channel |
 |---|---|---|
-| Conduct contacts (currently the Founder, with a trusted adult as alternate) | Every 6 months; next: May 2027 | `orridian.contact@gmail.com` · alternate: [conduct-alternate-contact] |
+| Conduct contacts (currently the Founder; GitHub abuse reporting as the independent alternate) | Every 6 months; next: May 2027 | `orridian.contact@gmail.com` · alternate: [GitHub's abuse reporting](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam) (independent of OSEL) |
 
 ## 1. Scope
 
@@ -28,7 +28,7 @@ We expect:
 
 ## 4. Reporting
 
-Report privately to `orridian.contact@gmail.com` (subject line: "Conduct report"). If the primary contact is involved in the incident, use the alternate route: [conduct-alternate-contact]. It goes to a trusted adult who is not the primary contact.
+Report privately to `orridian.contact@gmail.com` (subject line: "Conduct report"). If the primary contact is involved in the incident, use GitHub's own [abuse reporting](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam), which is reviewed by GitHub staff, not by OSEL. A trusted adult will be added as a second OSEL conduct contact as the community grows.
 You may report on behalf of someone else. Reports in public issues will be moved to private handling.
 
 ## 5. Response

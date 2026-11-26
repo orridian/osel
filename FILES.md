@@ -5,7 +5,7 @@ Not listed (generated, don't upload): `.venv/` (Python environment), `website/no
 
 **Verified locally (launch audit, 22 Nov 2026):** 90 automated tests pass; lint (`ruff`) and strict type checks (`mypy`) are clean; the package builds and the documented quick start passes in a fresh environment with the documented exit codes; the website and docs build together with 0 broken links (603 links) both at a custom-domain root and under a GitHub Pages sub-path; no secrets, personal emails or local paths are in the files; all GitHub Actions are pinned to commit SHAs. Run `python scripts/launch_audit.py` to repeat every check.
 
-**Not done yet:** nothing is pushed to GitHub, published to PyPI or deployed. The GitHub organization `orridian` must be created by the founder in the web UI first. One placeholder remains: `[conduct-alternate-contact]` (the trusted adult's contact route for Code of Conduct reports). Identity is filled in (Orridian / Lokesh Yarlagadda / `lokeshyarlagadda473`), the version is `0.1.0a1`, and license and privacy policy are approved by a parent/guardian. Full status: `operations/launch-checklist.md` and `operations/execution-report-2026-11-24.md`.
+**Status (26 Nov 2026):** public at https://github.com/orridian/osel; v0.1.0a1 released on GitHub as a pre-release; website and docs live at https://orridian.github.io/osel/. PyPI publishing is being enabled. Full history: `operations/execution-report-2026-11-24.md`.
 
 ---
 
