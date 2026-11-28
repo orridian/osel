@@ -5,6 +5,12 @@ Versioning: see [policies/release.md](policies/release.md).
 
 ## [Unreleased]
 
+### Fixed
+- `--require-ci` no longer treats a zero-width paired interval as statistical evidence. With one paired example, or with identical non-zero differences on too few examples (sign test: fewer than 6 at 95%), `ci_excludes_zero` is now `null` with an explanation (`ci_note`). Identical differences on enough examples still count.
+
+### Added
+- Comparisons now carry `warnings`, shown by `osel compare` and `osel check` and included in their JSON: small paired samples (< 30), uninformative intervals, and the higher chance of a false alarm when several metrics are compared.
+
 ## [0.1.0a1] — 2026-11-24 (first public alpha)
 
 ### Added
