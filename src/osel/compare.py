@@ -29,6 +29,8 @@ class MetricComparison:
     paired_ci_low: float | None = None
     paired_ci_high: float | None = None
     ci_excludes_zero: bool | None = None
+    # Why ci_excludes_zero is None although paired scores exist (interval not informative).
+    ci_note: str | None = None
 
     def degradation(self) -> float:
         """How much worse current is than baseline (positive = worse)."""
@@ -47,6 +49,7 @@ class Comparison:
     missing_in_current: list[str] = field(default_factory=list)
     new_in_current: list[str] = field(default_factory=list)
     confidence: float = 0.95
+    warnings: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -78,6 +81,52 @@ def _direction(delta: float | None, higher_is_better: bool) -> str:
         return "unchanged"
     better = delta > 0 if higher_is_better else delta < 0
     return "improved" if better else "degraded"
+
+
+def _uninformative_ci_reason(paired: stats.PairedDifference, confidence: float) -> str | None:
+    """Explain why a paired interval says nothing about noise, or None if it is usable.
+
+    A bootstrap interval has zero width when there is one pair or when every per-example
+    difference is identical, so it would "exclude zero" with no evidence about variability.
+
+    - One pair: nothing can be said.
+    - All differences identical and non-zero: the evidence is that every example moved the
+      same way. A two-sided sign test gives probability 2 * 0.5**n of that under "no real
+      change", so the result is accepted only when that is below 1 - confidence (n >= 6 at
+      95%). All differences exactly zero is fine: the runs agree on every example.
+    """
+    if paired.n < 2:
+        return f"only {paired.n} paired example: uncertainty cannot be estimated"
+    iv = paired.interval
+    if iv is not None and iv.high - iv.low <= EPS and abs(paired.mean_diff) > EPS:
+        if 2 * 0.5**paired.n > 1 - confidence:
+            return (
+                f"all {paired.n} paired differences are identical and there are too few "
+                "to rule out chance"
+            )
+    return None
+
+
+def _comparison_warnings(results: list[MetricComparison], confidence: float) -> list[str]:
+    out: list[str] = []
+    for mc in results:
+        if mc.ci_note is not None:
+            out.append(f"metric {mc.metric!r}: {mc.ci_note}; treat its interval as not informative")
+        elif 0 < mc.paired_n < stats.SMALL_SAMPLE:
+            out.append(
+                f"metric {mc.metric!r}: only {mc.paired_n} paired examples; "
+                f"bootstrap intervals are unreliable below {stats.SMALL_SAMPLE}"
+            )
+    k = sum(1 for mc in results if mc.ci_excludes_zero is not None)
+    if k >= 2:
+        chance = 1 - confidence**k
+        out.append(
+            f"{k} metrics compared, each at {confidence:.0%} confidence: if nothing really "
+            f"changed, the chance that at least one interval excludes 0 by noise alone is about "
+            f"{chance:.0%} (if metrics were independent; up to {min(1.0, k * (1 - confidence)):.0%} "
+            "otherwise). Decide on one primary metric in advance."
+        )
+    return out
 
 
 def compare_runs(
@@ -139,9 +188,13 @@ def compare_runs(
                     mc.paired_ci_low = paired.interval.low
                     mc.paired_ci_high = paired.interval.high
                     mc.ci_excludes_zero = paired.interval.excludes_zero()
+                mc.ci_note = _uninformative_ci_reason(paired, conf)
+                if mc.ci_note is not None:
+                    mc.ci_excludes_zero = None
         results.append(mc)
 
     return Comparison(
+        warnings=_comparison_warnings(results, conf),
         baseline_run=baseline.run_id,
         current_run=current.run_id,
         compatible=compatible,

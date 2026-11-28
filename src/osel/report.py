@@ -90,6 +90,8 @@ def render_comparison(cmp: Comparison) -> str:
         note = ""
         if mc.ci_excludes_zero is False and mc.direction in ("improved", "degraded"):
             note = " (CI includes 0)"
+        elif mc.ci_note is not None and mc.direction in ("improved", "degraded"):
+            note = " (CI not informative)"
         delta = f"{mc.delta:+.4f}" if mc.delta is not None else "n/a"
         lines.append(
             f"  {mc.metric:<16}{_fmt(mc.baseline_mean):>10}{_fmt(mc.current_mean):>10}"
@@ -105,6 +107,8 @@ def render_comparison(cmp: Comparison) -> str:
         lines.append(f"  missing in current: {', '.join(cmp.missing_in_current)}")
     if cmp.new_in_current:
         lines.append(f"  new in current: {', '.join(cmp.new_in_current)}")
+    if cmp.warnings:
+        lines += ["", "  warnings:"] + [f"    - {w}" for w in cmp.warnings]
     return "\n".join(lines)
 
 
